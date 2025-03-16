@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+/*背景ドーナツ*/
+.background {
+	position: relative;
+}
+
+[class*="donut_back"] {
+	height: 120px;
+}
+
+.top_donut_back {
+	position: absolute;
+	top: -30px;
+	left: 0px;
+	animation: vertical_move_1 5s infinite ease;
+}
+
+.bottom_donut_back {
+	position: absolute;
+	bottom: -20px;
+	right: 0;
+	animation: vertical_move_2 5s infinite ease;
+}
+
+/*トップビュー*/
+.area_top_view {
+	height: 400px;
+	margin: 0 auto;
+	background: url("../images/news_eye.jpg") no-repeat center bottom;
+	background-size: cover;
+	/*画像が広がった状態で表示される*/
+	display: flex;
+	align-items: center;
+}
+
+.text_top_view {
+	max-width: 300px;
+	margin: 0 auto;
+	padding: 10px 30px;
+	background-color: rgba(222, 148, 137, 0.7);
+	border-radius: 30px;
+	font: 500 2em/1.5 "M PLUS Rounded 1c", serif;
+	text-align: center;
+	color: #fff;
+	position: relative;
+}
+
+[class*="_line"] {
+	width: 100%;
+	margin: 0;
+	position: relative;
+}
+
+.under_line {
+	padding: 0 0 10px 0;
+}
+
+.under_line::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	border-radius: 30px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+/*エリア_ホーム*/
+[class*="area_home"] {
+	padding: 40px 0;
+}
+
+[class*="_white"] {
+	background: #fff;
+}
+
+/*ニュースリスト*/
+.list_news {
+	max-width: 400px;
+	padding: 0 30px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 30px;
+	position: relative;
+	z-index: 50;
+}
+
+[class*="list_item"] {
+	font-family: "Zen Kaku Gothic New", serif;
+	letter-spacing: 0.15em;
+}
+
+.list_item_dt {
+	padding: 20px 0 0;
+	font-weight: 600;
+	font-size: 1em;
+}
+
+.list_item_dd {
+	padding: 10px 0 20px 0;
+	margin: 0;
+	font-weight: bold;
+	font-size: 1.2em;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.border_none {
+	border: none;
+}

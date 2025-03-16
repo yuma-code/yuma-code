@@ -1,0 +1,319 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Zen+Kaku+Gothic+New&display=swap');
+
+body {
+  max-width: 428px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("../images/donuts_back.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  color: #000;
+}
+
+.container {
+  max-width: 400px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+
+/*ドーナツアニメーション*/
+@keyframes vertical_move_1 {
+
+  0%,
+  100% {
+    transform: rotate(-30deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes vertical_move_2 {
+
+  0%,
+  100% {
+    transform: rotate(25deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+
+/*PC用ボタンホバーアニメーション*/
+@media screen and (min-width:429px) {
+
+  [class*="slide_hov"] {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    background-color: #e3c7af;
+    border-radius: 30px;
+    font: 900 1.1em/1 "Zen Kaku Gothic New", serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  [class*="slide_hov"]::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 0%;
+    height: 100%;
+    background-color: #89d3de;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  [class*="slide_hov"]:hover {
+    color: #fff;
+  }
+
+  [class*="slide_hov"]:hover::before {
+    width: 100%;
+  }
+
+  .btnarea .slide_hov_white {
+    background-color: #fff;
+  }
+
+
+}
+
+
+/*スマホ用ボタン*/
+@media screen and (max-width:428px) {
+
+  .none_hov {
+    max-width: 120px;
+    padding: 10px 25px;
+    background-color: #89d3de;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font: 900 1.1em/1 "Zen Kaku Gothic New", serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
+
+}
+
+/*ヘッダー*/
+header {
+  width: 428px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+header>.container {
+  /*ヘッダーの.containerを左右いっぱいに伸ばしたい場合は、max-widthをなくす*/
+  max-width: none;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/*ロゴ*/
+[class*="logo_area"] .logo {
+  display: block;
+}
+
+[class*="logo_area"] img {
+  height: 100px;
+  padding: 5px 0 0 0;
+}
+
+
+/*３点リーダー*/
+.reader_area_header {
+  height: 100%;
+}
+
+.drop_list {
+  margin: 5px 0 0 0;
+  padding: 0 5px;
+}
+
+.drop_list>li {
+  max-width: 100px;
+}
+
+.drop_list>li>img {
+  margin: 0 0 0 auto;
+}
+
+.drop_list>li>.tp_ul {
+  display: none;
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 0;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.drop_list>li>.tp_ul.droplist {
+  display: block;
+  animation: drop 0.5s 1 ease-out 0s;
+}
+
+@keyframes drop {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.tp_ul>li {
+  max-width: 80px;
+  height: 30px;
+  padding: 0 0 10px 0;
+  font: bold 1em/1 "Zen Kaku Gothic New", serif;
+  letter-spacing: 0.1em;
+}
+
+.tp_ul>li>a {
+  display: block;
+  padding: 10px 0 0 8px;
+  color: #000;
+  position: relative;
+}
+
+.tp_ul>li>a::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  margin: 0 0 0 8px;
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  -webkit-transition: transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.tp_ul>li>a:hover::before {
+  transform: scale(1, 1);
+}
+
+.icon_reader {
+  display: block;
+  height: 100px;
+}
+
+
+/*テキストホーム*/
+.body_home {
+  text-align: center;
+}
+
+.description {
+  margin: 0 0 50px 0;
+  font: 600 1em/2 "Zen Kaku Gothic New", serif;
+  letter-spacing: 0.25em;
+}
+
+.desc_large {
+  font-size: 1.2em;
+  letter-spacing: 0.25em;
+}
+
+
+/*テキストホームのSNSアイコン*/
+.list_icon {
+  margin: 0 0 40px -40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[class*="icon_sns"] {
+  height: 70px;
+}
+
+[class*="icon_sns"] img {
+  display: block;
+  height: 100%;
+  transition: 0.2s ease 0s;
+}
+
+[class*="icon_sns"] img:hover {
+  transform: translate(0, -10px);
+}
+
+
+/*フッター*/
+footer {
+  width: 100%;
+  margin: -20px 0;
+  padding: 5px 0 0 0;
+  background-color: #fff;
+}
+
+footer>.container {
+  max-width: none;
+  background: #de9489;
+  border-radius: 50% / 10% 10% 0 0;
+}
+
+.list_access_footer {
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list_access {
+  margin: 0 0 0 10px;
+  text-align: center;
+}
+
+.list_access>.list_icon {
+  padding-top: 10px;
+}
+
+.list_access>.description {
+  margin: 0;
+  padding: 40px 0 0 0;
+  font-size: 0.75em;
+  color: #fff;
+}
+
+
+/*コピーライト*/
+.copyright {
+  width: 100%;
+  margin: 0 auto;
+  font: 600 1em/50px "Zen Kaku Gothic New", serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #de9489;
+  background: #fff;
+  border-radius: 50% / 100% 100% 0 0;
+}
