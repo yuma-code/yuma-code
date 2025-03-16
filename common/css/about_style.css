@@ -29,7 +29,6 @@
 	margin: 0 auto;
 	background: url("../images/shoo_eye.jpg") no-repeat center bottom;
 	background-size: cover;
-	/*画像が広がった状態で表示される*/
 	display: flex;
 	align-items: center;
 }
