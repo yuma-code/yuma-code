@@ -2,11 +2,10 @@
 
 /*トップビュー*/
 .area_top_view {
-    height: 400px;
-    margin: 0 auto;
-    background: url("../images/tower_eye.jpg") no-repeat center bottom;
-    background-size: cover;
-    /*画像が広がった状態で表示される*/
+	height: 400px;
+	margin: 0 auto;
+	background: url("../images/tower_eye.jpg") no-repeat center bottom;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 }
@@ -14,12 +13,12 @@
 .text_top_view {
 	max-width: 300px;
 	margin: 0 auto;
-    padding: 10px 30px;
-    background-color: rgba(222, 148, 137, 0.7);
-    border-radius: 30px;
-    font: 500 2em/1.5 "M PLUS Rounded 1c", serif;
+	padding: 10px 30px;
+	background-color: rgba(222, 148, 137, 0.7);
+	border-radius: 30px;
+	font: 500 2em/1.5 "M PLUS Rounded 1c", serif;
 	text-align: center;
-    color: #fff;
+	color: #fff;
 	position: relative;
 }
 
@@ -47,15 +46,15 @@
 
 /*エリア_ホーム*/
 [class*="area_home"] {
-    padding: 20px 0 5px;
+	padding: 20px 0 5px;
 }
 
 [class*="_white"] {
-    background: #fff;
+	background: #fff;
 }
 
 /*テキストホーム*/
-.area_home_white> .container {
+.area_home_white>.container {
 	text-align: center;
 }
 
@@ -68,19 +67,19 @@
 .list_menu {
 	max-width: 400px;
 	padding: 30px 0;
-	border-bottom: 2px solid rgba(0 ,0 ,0 ,0.3);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 	position: relative;
 }
 
 .border_none {
-    border: none;
+	border: none;
 }
 
 .list_menu img {
 	width: 80%;
 }
 
-.list_menu> .description {
+.list_menu>.description {
 	width: 300px;
 	margin: 0 auto 20px;
 	font-size: 1em;
@@ -123,17 +122,17 @@
 
 .text_dropdown.active {
 	display: block;
-    animation: dropup 0.5s 1 ease-out 0s;
+	animation: dropup 0.5s 1 ease-out 0s;
 }
 
 @keyframes dropup {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+	from {
+		transform: translateY(50px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
 }
