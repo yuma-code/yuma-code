@@ -25,62 +25,93 @@ a {
 
 /*ドーナツアニメーション*/
 @keyframes vertical_move_1 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(-30deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
 }
 
 @keyframes vertical_move_2 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(25deg);
   }
+
   50% {
     transform: rotate(0deg);
   }
 }
 
 
-/*スライドアニメーション*/
-[class*="slide_hov"] {
-  display: block;
-  max-width: 120px;
-  padding: 15px 30px;
-  background-color: #fff;
-  border: 2px solid #000;
-  border-radius: 30px;
-  font: 900 1.1em/1 "Zen Kaku Gothic New", serif;
-  letter-spacing: 0.1em;
-  text-align: center;
-  position: relative;
-  z-index: 0;
-  overflow: hidden;
+/*PC用ボタンホバーアニメーション*/
+@media screen and (min-width:429px) {
+
+  [class*="slide_hov"] {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto;
+    padding: 15px 30px;
+    background-color: #e3c7af;
+    border-radius: 30px;
+    font: 900 1.1em/1 "Zen Kaku Gothic New", serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  [class*="slide_hov"]::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 0%;
+    height: 100%;
+    background-color: #89d3de;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+
+  [class*="slide_hov"]:hover {
+    color: #fff;
+  }
+
+  [class*="slide_hov"]:hover::before {
+    width: 100%;
+  }
+
+  .btnarea .slide_hov_white {
+    background-color: #fff;
+  }
+
+
 }
 
-[class*="slide_hov"]::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 0%;
-  height: 100%;
-  background-color: #89d3de;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
 
-[class*="slide_hov"]:hover {
-  color: #fff;
-}
+/*スマホ用ボタン*/
+@media screen and (max-width:428px) {
 
-[class*="slide_hov"]:hover::before {
-  width: 100%;
-}
+  .none_hov {
+    max-width: 120px;
+    padding: 10px 25px;
+    background-color: #89d3de;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font: 900 1.1em/1 "Zen Kaku Gothic New", serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+  }
 
+}
 
 /*ヘッダー*/
 header {
@@ -90,7 +121,7 @@ header {
   z-index: 999;
 }
 
-header > .container {
+header>.container {
   /*ヘッダーの.containerを左右いっぱいに伸ばしたい場合は、max-widthをなくす*/
   max-width: none;
   height: 110px;
@@ -123,15 +154,15 @@ header > .container {
   padding: 0 5px;
 }
 
-.drop_list > li {
+.drop_list>li {
   max-width: 100px;
 }
 
-.drop_list > li > img {
+.drop_list>li>img {
   margin: 0 0 0 auto;
 }
 
-.drop_list > li > .tp_ul {
+.drop_list>li>.tp_ul {
   display: none;
   width: 100%;
   margin: 10px 0 0;
@@ -140,7 +171,7 @@ header > .container {
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.drop_list > li > .tp_ul.droplist {
+.drop_list>li>.tp_ul.droplist {
   display: block;
   animation: drop 0.5s 1 ease-out 0s;
 }
@@ -150,13 +181,14 @@ header > .container {
     transform: translateY(-30px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-.tp_ul > li {
+.tp_ul>li {
   width: 80px;
   height: 30px;
   padding: 0 0 10px 0;
@@ -164,14 +196,14 @@ header > .container {
   letter-spacing: 0.1em;
 }
 
-.tp_ul > li > a {
+.tp_ul>li>a {
   display: block;
   padding: 10px 0 0 8px;
   color: #000;
   position: relative;
 }
 
-.tp_ul > li > a::before {
+.tp_ul>li>a::before {
   content: "";
   width: 100%;
   height: 1px;
@@ -186,7 +218,7 @@ header > .container {
   transition: transform 0.2s;
 }
 
-.tp_ul > li > a:hover::before {
+.tp_ul>li>a:hover::before {
   transform: scale(1, 1);
 }
 
@@ -210,16 +242,6 @@ header > .container {
 .desc_large {
   font-size: 1.2em;
   letter-spacing: 0.25em;
-}
-
-.btnarea [class*="slide_hov"] {
-  margin: 0 auto;
-  border: none;
-  background-color: #e3c7af;
-}
-
-.btnarea .slide_hov_white {
-  background-color: #fff;
 }
 
 
@@ -254,7 +276,7 @@ footer {
   background-color: #fff;
 }
 
-footer > .container {
+footer>.container {
   max-width: none;
   background: #de9489;
   border-radius: 50% / 10% 10% 0 0;
@@ -272,11 +294,11 @@ footer > .container {
   text-align: center;
 }
 
-.list_access > .list_icon {
+.list_access>.list_icon {
   padding-top: 10px;
 }
 
-.list_access > .description {
+.list_access>.description {
   margin: 0;
   padding: 40px 0 0 0;
   font-size: 0.75em;
