@@ -25,11 +25,10 @@
 
 /*トップビュー*/
 .area_top_view {
-    height: 400px;
-    margin: 0 auto;
-    background: url("../images/news_eye.jpg") no-repeat center bottom;
-    background-size: cover;
-    /*画像が広がった状態で表示される*/
+	height: 400px;
+	margin: 0 auto;
+	background: url("../images/news_eye.jpg") no-repeat center bottom;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 }
@@ -37,12 +36,12 @@
 .text_top_view {
 	max-width: 300px;
 	margin: 0 auto;
-    padding: 10px 30px;
-    background-color: rgba(222, 148, 137, 0.7);
-    border-radius: 30px;
-    font: 500 2em/1.5 "M PLUS Rounded 1c", serif;
+	padding: 10px 30px;
+	background-color: rgba(222, 148, 137, 0.7);
+	border-radius: 30px;
+	font: 500 2em/1.5 "M PLUS Rounded 1c", serif;
 	text-align: center;
-    color: #fff;
+	color: #fff;
 	position: relative;
 }
 
@@ -70,18 +69,18 @@
 
 /*エリア_ホーム*/
 [class*="area_home"] {
-    padding: 40px 0;
+	padding: 40px 0;
 }
 
 [class*="_white"] {
-    background: #fff;
+	background: #fff;
 }
 
 /*ニュースリスト*/
 .list_news {
 	max-width: 400px;
 	padding: 0 30px;
-	background-color: rgba(255 ,255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
 	border-radius: 30px;
 	position: relative;
 	z-index: 50;
@@ -103,9 +102,9 @@
 	margin: 0;
 	font-weight: bold;
 	font-size: 1.2em;
-	border-bottom: 2px solid rgba(0 ,0 ,0 ,0.3);
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .border_none {
-    border: none;
+	border: none;
 }
