@@ -13,7 +13,7 @@
 	position: absolute;
 	top: -50px;
 	right: 0;
-    animation: vertical_move_2 5s infinite ease;
+	animation: vertical_move_2 5s infinite ease;
 }
 
 .bottom_donut_back {
@@ -25,11 +25,11 @@
 
 /*トップビュー*/
 .area_top_view {
-    height: 400px;
-    margin: 0 auto;
-    background: url("../images/shoo_eye.jpg") no-repeat center bottom;
-    background-size: cover;
-    /*画像が広がった状態で表示される*/
+	height: 400px;
+	margin: 0 auto;
+	background: url("../images/shoo_eye.jpg") no-repeat center bottom;
+	background-size: cover;
+	/*画像が広がった状態で表示される*/
 	display: flex;
 	align-items: center;
 }
@@ -37,12 +37,12 @@
 .text_top_view {
 	max-width: 300px;
 	margin: 0 auto;
-    padding: 10px 30px;
-    background-color: rgba(222, 148, 137, 0.7);
-    border-radius: 30px;
-    font: 500 2em/1.5 "M PLUS Rounded 1c", serif;
+	padding: 10px 30px;
+	background-color: rgba(222, 148, 137, 0.7);
+	border-radius: 30px;
+	font: 500 2em/1.5 "M PLUS Rounded 1c", serif;
 	text-align: center;
-    color: #fff;
+	color: #fff;
 	position: relative;
 }
 
@@ -70,11 +70,11 @@
 
 /*エリア_ホーム*/
 [class*="area_home"] {
-    padding: 60px 0;
+	padding: 60px 0;
 }
 
 [class*="_white"] {
-    background: #fff;
+	background: #fff;
 }
 
 [class*="_brown"] {
@@ -83,29 +83,29 @@
 
 /*ヘッド*/
 .head_home {
-    margin: 0 0 70px;
-    text-align: center;
+	margin: 0 0 70px;
+	text-align: center;
 }
 
 .head_home [class*="ttl"] {
-    max-width: 150px;
-    margin: 0 auto;
-    padding: 0 0 10px;
-    font: 600 1.5em/1 "Zen Kaku Gothic New", serif;
-    letter-spacing: 0.1em;
-    position: relative;
+	max-width: 150px;
+	margin: 0 auto;
+	padding: 0 0 10px;
+	font: 600 1.5em/1 "Zen Kaku Gothic New", serif;
+	letter-spacing: 0.1em;
+	position: relative;
 }
 
 .head_home [class*=_ja]::after {
-    /*見出しのライン部分*/
-    content: "";
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: #89d3de;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+	/*見出しのライン部分*/
+	content: "";
+	display: block;
+	width: 100%;
+	height: 2px;
+	background: #89d3de;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 /*マップ*/
