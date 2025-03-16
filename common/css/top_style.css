@@ -44,7 +44,6 @@
   margin: 0 auto;
   background: url(../images/eyecatch.jpg) no-repeat center center;
   background-size: cover;
-  /*画像が広がった状態で表示される*/
 }
 
 .text_top_view {
@@ -61,7 +60,7 @@
   z-index: 50;
 }
 
-.text_top_view > span {
+.text_top_view>span {
   display: block;
   text-indent: 1em;
 }
